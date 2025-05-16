@@ -10,3 +10,23 @@
 # 5. Todas las notas deben estar entre 1.0 y 7.0.
 
 # 👇 Aquí comienza tu código
+cantidad_notas = int(input("Ingrese la cantidad de notas porfavor"))
+notas = []
+for i in range(cantidad_notas):
+    while True:
+        try:
+            nota = float(input(f"Ingrese su nota *{i+1} (rango 1.0 - 7.0):"))
+            if 1.0 <= nota <= 7.0:
+                notas.append(nota)
+                break
+            else:
+                print("Nota fuera del rango, intentelo nuevamente porfavor.")
+        except ValueError:
+            print("Número no valido, ingresar número con decimal")
+promedio = sum(notas) / len(notas)
+promedio_redondeado = round(promedio, 2)
+print(f"Promedio: {promedio_redondeado}")
+if promedio >= 4.0:
+    print("Usted ha aprobado")
+else:
+    print("Usted ha reprobado")

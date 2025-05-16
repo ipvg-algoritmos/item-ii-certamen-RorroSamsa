@@ -9,3 +9,8 @@
 # 4. Luego, solicita al usuario un número y llama a la función con ese valor
 
 # 👇 Aquí comienza tu código
+def mostrar_tabla(n):
+    for i in range (1,11):
+        print(f"{n} X {i} = {n*i}")
+n = int(input("Ingrese su número:"))
+print(mostrar_tabla(n))

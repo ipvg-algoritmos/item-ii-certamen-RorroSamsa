@@ -11,3 +11,12 @@
 # 3. Muestra si es o no un palíndromo con un mensaje claro.
 
 # 👇 Aquí comienza tu código
+def es_palindromo(texto):
+    texto = texto.lower()
+    texto = texto.replace(" ", "")
+    return texto == texto[::-1]
+palabra = input("Ingrese una palabra o frase: ")
+if es_palindromo(palabra):
+    print("Es palindromo")
+else:
+    print("No es palindromo")
